@@ -5,10 +5,10 @@
 #' This function performs a differential expression analysis using the DESeq2 package.
 #' It is designed to work with microbiome data and can handle paired or non-paired samples.
 #'
-#' @param taxobj Taxonomic summary objects containing the taxonomic information, relative abundance, metafile and configuration.
+#' @param taxobj Configured tax summary objects.See in \code{\link{object_config}}.
 #' @param taxlevel The taxonomic level for the analysis.Must be one of c("Domain","Phylum","Class","Order","Family","Genus","Species","Base")
 #' @param comparison A vector of conditions to compare. Default: NULL, all unique conditions are compared (only for Two groups).
-#' @param cutoff The log2 fold change cutoff for considering a taxon as differentially expressed.
+#' @param cutoff The log2 fold change cutoff for considering as differential taxon.
 #' @param control_name Character. The name of the control group for the comparison.
 #' @param paired Logical. Should the samples be treated as paired? Default: False
 #' @param subject Optional. The subject identifier for paired samples. Default: Null

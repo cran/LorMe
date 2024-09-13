@@ -1,10 +1,10 @@
 #' Generate Differential Bar Plot and Error bar Plot
 #'
-#' @param taxobj Tax summary objects computed by \code{\link{tax_summary}}. Default: NULL.
+#' @param taxobj Configured tax summary objects.See in \code{\link{object_config}}.
 #' @param taxlevel Taxonomy levels used for visualization. Must be one of
-#'   c("Domain","Phylum","Class","Order","Family","Genus","Species","Base"). Default: NULL.
+#'   c("Domain","Phylum","Class","Order","Family","Genus","Species","Base").
 #' @param comparison A vector of conditions to compare. Default: NULL, all unique conditions are compared (only for Two groups).
-#' @param rel_threshold Threshold filtering taxa for differential analysis.
+#' @param rel_threshold Threshold filtering taxa for differential analysis. Default:0.005
 #' @param anno_row Default: 'taxonomy'. Rownames for visualization. Options are 'taxonomy' for showing taxonomic information and 'ID' for showing taxonomic ID.
 #' @param aes_col A named vector of colors to be used in the plots.
 #' @param limit_num Numeric. The maximum number of significant results to display. Default: NULL, showing all differential taxa.
@@ -135,7 +135,7 @@ differential_bar=function(taxobj,
     t_summary=rbind(t_summary,data.frame(ID,p.value,estimate,conf.low,conf.high,mean1,mean2))
     i=i+1
   }
-  colnames(t_summary)[6:7]=unique(taxobj$Groupfile$Group) %>% sort()
+  colnames(t_summary)[6:7]=unique(condition)  %>% sort()
   t_summary$padj=p.adjust(t_summary$p.value,"BH")
   colnames(t_summary)[1]=colnames(taxonomy)[1]
   t_summary_anno=left_join(t_summary,taxonomy) %>% suppressMessages()

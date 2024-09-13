@@ -1,8 +1,8 @@
 #' Calculate alpha diversity based on tax summary object
 #' @description  Calculate alpha diversity for each sample
 #'
-#' @param taxobj tax summary objects computed by \code{\link{tax_summary}}. Default:NULL.
-#' @param taxlevel taxonomy levels used for visualization.Must be one of c("Domain","Phylum","Class","Order","Family","Genus","Species","Base").Default:NULL.
+#' @param taxobj Configured tax summary objects.See in \code{\link{object_config}}.
+#' @param taxlevel taxonomy levels used for visualization.Must be one of c("Domain","Phylum","Class","Order","Family","Genus","Species","Base").
 #' @param prefix A character string as prefix of diversity index. Default:""
 #'
 #' @return 'Alpha_diversity_calculator' returns alpha-diversity of each sample in format of column table (dataframe) combined with group information in meta file.
@@ -37,7 +37,7 @@ Alpha_diversity_calculator<- function(taxobj,taxlevel,prefix=""){
     warning("Illegal 'taxlevel'!")
     return(NULL)
   }
-  if(is.null(taxobj["configuration"])){warning("taxonomic summary object not configured yet, call '?object_config' for configuration")}
+  if(is.null(taxobj$configuration)){stop("taxonomic summary object not configured yet, call '?object_config' for configuration")}
   input=eval(parse(text=paste0("taxobj","$",taxlevel)))
   matrix=as.matrix(t(input[,-1]))
   matrix=round(matrix,0)

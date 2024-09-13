@@ -2,7 +2,7 @@
 #'
 #' Function for visualization of microbial structure with PCAplot, PCoAplot and NMDSplot
 #'
-#' @param taxobj tax summary objects computed by \code{\link{tax_summary}}.
+#' @param taxobj Configured tax summary objects.See in \code{\link{object_config}}.
 #' @param taxlevel taxonomy levels used for visualization.Must be one of
 #'   c("Domain","Phylum","Class","Order","Family","Genus","Species","Base").
 #' @param ptsize Numeric, default: 2. Size of point in plot. See
@@ -82,7 +82,7 @@ structure_plot=function(taxobj,taxlevel,ptsize=2,diagram=NULL,ellipse.level=0.85
   if(!taxlevel %in% c("Domain","Kingdom","Phylum","Class","Order","Family","Genus","Species","Base")){
     warning("Illegal 'taxlevel',please choose among c('Domain','Kingdom','Phylum','Class','Order','Family','Genus','Species','Base'")
   }
-  if(!"configuration" %in% names(taxobj)){warnings("taxonomy summary object not configured yet, call '?object_config' for configuration")}
+  if(is.null(taxobj$configuration)){stop("taxonomic summary object not configured yet, call '?object_config' for configuration")}
   inputframe=eval(parse(text=paste0("taxobj","$",taxlevel,"_percent")))
   input=data.frame(inputframe[,-1],row.names = paste0(taxlevel,1:nrow(inputframe)))
   groupframe=taxobj$Groupfile
@@ -227,7 +227,7 @@ structure_plot=function(taxobj,taxlevel,ptsize=2,diagram=NULL,ellipse.level=0.85
     if(diagram=="ellipse"){
       NMDSplot=NMDSplot+
         geom_point(size=ptsize,alpha=.8,pch=21,color="black",aes(fill=factor(groupframe[,treat_location]))) +
-        stat_ellipse(level=ellipse.level,lty=2)
+        stat_ellipse(level=ellipse.level,lty=2,aes(color=factor(groupframe[,treat_location])))
     }else if(diagram=="stick"){
       NMDSplot=NMDSplot+
         geom_segment(aes(xend = NMDSframe[,'cent1'], yend = NMDSframe[,'cent2'],color=factor(groupframe[,treat_location])), show.legend = FALSE,size=.3,alpha=.8) +
