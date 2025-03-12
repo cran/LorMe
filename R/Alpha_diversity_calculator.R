@@ -47,12 +47,19 @@ Alpha_diversity_calculator<- function(taxobj,taxlevel,prefix=""){
   matrix=round(matrix,0)
   chao<-estimateR(matrix)[2,];ACE<-estimateR(matrix)[4,]    ##calculate alpha-diversity##
   alpha.frame<-data.frame(shannon,richness,evenness,simpson,chao, ACE) %T>%
-    {colnames(.)<-c(paste0(prefix,"Shannon"),paste0(prefix,"Species number"),paste0(prefix,"Simpson"),paste0(prefix,"Evenness"),paste0(prefix,"Chao"),paste0(prefix,"ACE"))}
+    {colnames(.)<-c(paste0(prefix,"Shannon"),paste0(prefix,"Species number"),paste0(prefix,"Evenness"),paste0(prefix,"Simpson"),paste0(prefix,"Chao"),paste0(prefix,"ACE"))}
   alpha.frame<-combine_and_translate(inputframe = alpha.frame,groupframe = groupframe,itemname = "Indexname",indexname = "Indexvalue",inputtype = FALSE)
   outplot=list()
   for(i in unique(alpha.frame[,"Indexname"])){
     subdata=alpha.frame[alpha.frame[,"Indexname"]==i,]
+    if(!is.null(taxobj$configuration$treat_order)){
+      subdata[,taxobj$configuration$treat_location]=factor(subdata[,taxobj$configuration$treat_location],levels = taxobj$configuration$treat_order)
+    }
+    if(is.null(taxobj$configuration$facet_location)){
     results=compare_plot(inputframe = subdata,treat_location = taxobj$configuration$treat_location,value_location = ncol(subdata),aes_col = taxobj$configuration$treat_col,point = TRUE,ylab_text = i)
+    }else{
+    results=compare_plot(inputframe = subdata,treat_location = taxobj$configuration$treat_location,value_location = ncol(subdata),aes_col = taxobj$configuration$treat_col,point = TRUE,ylab_text = i,facet_location=taxobj$configuration$facet_location)
+    }
     outplot=c(outplot,list(results))
     names(outplot)[length(outplot)]=paste0("Plotobj_",i)
   }

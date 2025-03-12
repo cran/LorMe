@@ -1,6 +1,6 @@
 Package: LorMe
 Title: Lightening One-Code Resolving Microbial Ecology Solution
-Version: 1.1.0
+Version: 1.2.0
 Authors@R: 
     c(person(given = "Ningqi",
            family = "Wang",
@@ -19,7 +19,7 @@ Description: Provides a robust collection of functions tailored for microbial ec
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Imports: ape, ggalluvial, ggplot2, ggpubr, grDevices, magrittr,
         RColorBrewer, scales, stringr, tidyr, vegan, dplyr, igraph,
         Hmisc, fdrtool, agricolae, multcompView, DescTools, HH, coin
@@ -27,10 +27,10 @@ Suggests: testthat (>= 3.0.0), ggrepel, readr, patchwork, grid,
         permute, indicspecies, S4Vectors, tibble, DESeq2
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-09-13 08:44:07 UTC; wangningqi
+Packaged: 2025-03-12 01:04:29 UTC; 24340
 Author: Ningqi Wang [aut, cre, cph],
   Yaozhong Zhang [aut],
   Gaofei Jiang [aut]
 Depends: R (>= 3.5.0)
 Repository: CRAN
-Date/Publication: 2024-09-13 09:00:02 UTC
+Date/Publication: 2025-03-12 03:20:02 UTC

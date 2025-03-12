@@ -106,6 +106,10 @@ differential_bar=function(taxobj,
     condition= condition[, 1]
   }
   if(is.null(aes_col)){
+    if(is.null(taxobj$configuration$treat_col)){
+      aes_col=c("#E69F00","#56B4E9")
+      warning("Color not assigned,generated automaticly")
+    }
     aes_col=taxobj$configuration$treat_col
   }
   if (is.null(names(aes_col)[1])) {

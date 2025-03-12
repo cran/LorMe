@@ -56,7 +56,7 @@ object_config=function(taxobj,treat_location,facet_location=NULL,rep_location,su
     stop("Invalid 'treat_location',Please check again!")
   }
   if(rep_location>ncol(taxobj$Groupfile)){
-    stop("Invalid 'treat_location',Please check again!")
+    stop("Invalid 'rep_location',Please check again!")
   }
   taxobj$Groupfile[,rep_location]=as.numeric(taxobj$Groupfile[,rep_location]) %>% suppressWarnings()
 
