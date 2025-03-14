@@ -1,6 +1,6 @@
 Package: LorMe
 Title: Lightening One-Code Resolving Microbial Ecology Solution
-Version: 1.2.0
+Version: 1.2.1
 Authors@R: 
     c(person(given = "Ningqi",
            family = "Wang",
@@ -27,10 +27,10 @@ Suggests: testthat (>= 3.0.0), ggrepel, readr, patchwork, grid,
         permute, indicspecies, S4Vectors, tibble, DESeq2
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2025-03-12 01:04:29 UTC; 24340
+Packaged: 2025-03-14 02:32:49 UTC; 24340
 Author: Ningqi Wang [aut, cre, cph],
   Yaozhong Zhang [aut],
   Gaofei Jiang [aut]
 Depends: R (>= 3.5.0)
 Repository: CRAN
-Date/Publication: 2025-03-12 03:20:02 UTC
+Date/Publication: 2025-03-14 09:10:02 UTC

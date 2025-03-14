@@ -1,6 +1,6 @@
-6d3e4029befe981708ed968b9eb7471c *DESCRIPTION
+d5ba897101c59f187c9efeeac8afe043 *DESCRIPTION
 2da79b33e6204462c67dc242c4a3835f *NAMESPACE
-571ba9e07befc81827838a1fd65701e8 *R/Alpha_diversity_calculator.R
+c5220b057416beeae031797f3d42ee1f *R/Alpha_diversity_calculator.R
 2e6148ebbad85803ff0287374043529f *R/Alpha_diversity_calculator2.R
 5e5ac0f0896a412088369bfd0b4d36a1 *R/Deseq_analysis.R
 e80b097534d9a9d94519421eff76441d *R/Deseq_analysis2.R
@@ -20,7 +20,7 @@ fe404ac534a3c254baba477b77fe156b *R/anova_report.R
 b68013ede29c30a9293ce3b7104e2608 *R/color_scheme.R
 e873e7dadf1422889afeb9fdfaa52195 *R/combine_and_translate.R
 cfa77a8736bb0f04056bc15ea948e1f2 *R/community_plot.R
-ceffbea110d66041a85572952ea491fb *R/compare_plot.R
+5af35a0e334c53895d5ed84fa3bceee2 *R/compare_plot.R
 1cef4c4017edc8b47fa5fec506ad5bca *R/differential_bar.R
 49d2cd82cc6b55dda33ac9b9654ae386 *R/indicator_analysis.R
 34092cf73d5dec3653e4c7f01888b839 *R/kruskal_report.R
@@ -33,7 +33,7 @@ c97386f22f6796843cbba078b3fbd727 *R/network_visual.R
 a3468b2091c711a7f48215328efd3eb4 *R/network_visual_re.R
 d7e599f4763aaa2ad25d29d9ad77df03 *R/network_withdiff.R
 56b1b5df88ffdbc62b2cff81ff250e4f *R/object_config.R
-0319812c0fe72207c95ac1befeb99a0f *R/structure_plot.R
+d59cd795ffb4d3b40d0c8eefbc290411 *R/structure_plot.R
 0b71165ea1130829a8ad078e1f5791ef *R/sub_tax_summary.R
 cd12783ac56a01bf1e55bd9409100421 *R/t_test_report.R
 da07616d9c9380419a2c7d790840b8e0 *R/tax_summary.R

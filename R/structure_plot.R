@@ -88,6 +88,12 @@ structure_plot=function(taxobj,taxlevel,ptsize=2,diagram=NULL,ellipse.level=0.85
   groupframe=taxobj$Groupfile
   treat_location=taxobj$configuration$treat_location
   facet_location=taxobj$configuration$facet_location
+  facet_order=taxobj$configuration$facet_order
+  if(!is.null(facet_order)){
+    if(!is.null(facet_location)){
+      groupframe[,facet_location]=factor(groupframe[,facet_location],levels=facet_order)
+    }
+  }
   rep_location=taxobj$configuration$rep_location
   specific.color=taxobj$configuration$treat_col
   output=list()
@@ -97,7 +103,7 @@ structure_plot=function(taxobj,taxlevel,ptsize=2,diagram=NULL,ellipse.level=0.85
     rownames(adonis_results)[1]=colnames(groupframe)[treat_location]
     attr(adonis_results, "heading")[2]='adonis2'
   }else{
-    adonis_results=adonis2(t(inputframe[,-1])~groupframe[,treat_location]*groupframe[,facet_location])
+    adonis_results=adonis2(t(inputframe[,-1])~groupframe[,treat_location]*groupframe[,facet_location],by = "terms")
     rownames(adonis_results)[1:3]=c(colnames(groupframe)[treat_location],
                                     colnames(groupframe)[facet_location],
                                     paste0(colnames(groupframe)[treat_location],"*",colnames(groupframe)[facet_location]))
