@@ -1,4 +1,4 @@
-93b82edc689b8cb85956f7424066eed6 *DESCRIPTION
+3f63b255961df19d436bc00272fd7fdc *DESCRIPTION
 c96b1f5a07d66d779b96378512de99de *NAMESPACE
 c51e9fb31dcb70faa260064ec8bab49d *R/0.LorMe_define.R
 513880c0d213f4f3f2f5fa11040bc276 *R/Alpha_diversity_calculator.R
@@ -11,7 +11,7 @@ c2fd0c5d8b39ca12b449f4d3f561a713 *R/Facet_group.R
 eb97e4363b6ee7d8bb07681622fca4a2 *R/LorMe.R
 f50b19eb4b533b6caf3173a0cd7f8894 *R/LorMe_defaults.R
 f46ed235e9ae6337e5df5caa83cc2550 *R/LorMe_options.R
-35eb6f0910f3c6018d4b64d92d1b6d66 *R/LorMe_pipeline.R
+3e821ca46bb3f235327a3a92f0a96bbf *R/LorMe_pipeline.R
 ba08f42b3649254d181bcb2853585b96 *R/Module_abundance.R
 a2cf253fcd6579178f29a2705dc2cc7d *R/Module_composition.R
 d41fbc76f847cbd43b8acd2e00eb681a *R/NC_remove.R
@@ -53,9 +53,9 @@ cd12783ac56a01bf1e55bd9409100421 *R/t_test_report.R
 302538c66a6fa014e7daa338cccac897 *R/theme_zg.R
 0a5a7719c1f368d9c6c5e4010ddb4964 *R/volcano_plot.R
 4b4ae53b8f30b7ebecb3ae91b3552dd7 *R/wilcox_test_report.R
-c563e62ee799bc7c2f822b4a21fdb3a1 *data/Facet_group.rda
-0a4d7bcad3b64a5a399a0ea89f0258e0 *data/Three_group.rda
-dd3ef2a4b49f695b22bcc635a4170296 *data/Two_group.rda
+acc6e0d713cd055398581eaf5476d884 *data/Facet_group.rda
+143248caef2e748b403d303d8956ee80 *data/Three_group.rda
+9cdee30c019306245a89f604f3f9d651 *data/Two_group.rda
 6092d57e321eae85e757fc8a6f743316 *data/testotu.rda
 1eaa54071e873cf331c7405f23d6036b *man/Alpha_diversity_calculator.Rd
 7371b1be364677ba3dc046fec17fd120 *man/Alpha_diversity_calculator2.Rd
@@ -68,7 +68,7 @@ adc77e4c304be162222997a9ea08bc74 *man/Dimension_reduction.Rd
 0a5823cb874544dc7a54c2efe3631916 *man/LorMe-package.Rd
 b97025dfbfbc62493136b64e4c577b81 *man/LorMe_defaults.Rd
 7e67abe491afa4692ca981d54cd8e1b4 *man/LorMe_options.Rd
-efc7ddded34ed031c5af10fd9fee4781 *man/LorMe_pipeline.Rd
+00527cadd252a3ee451c767feb1e586d *man/LorMe_pipeline.Rd
 aa321a43fce59c8e15e55a96091ea58f *man/Module_abundance.Rd
 7e8e2a2ea0cb4793a117030c6ac8aeaa *man/Module_composition.Rd
 e99207466f179781865018330bb51545 *man/NC_remove.Rd
