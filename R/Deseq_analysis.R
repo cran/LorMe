@@ -95,15 +95,15 @@ Deseq_analysis<-function(taxobj,taxlevel,comparison=NULL,cutoff,control_name,pai
       !requireNamespace("tibble", quietly = TRUE)) {
     stop("The 'DESeq2', 'S4Vectors', and 'tibble' package(s) are required but not installed. Please install them to use this function.")
   }
-  if(is.null(taxobj$configuration)){
+  if(is.null(taxobj$configuration$treat_location)){
     stop("taxonomic summary object not configured yet, call '?object_config' for configuration!")
     return(NULL)
   }
-  if(is.null(eval(parse(text=paste0("taxobj","$",taxlevel))))){
+  if(is.null(methods::slot(taxobj, "data")[[taxlevel]])){
     warning("Illegal 'taxlevel'!")
     return(NULL)
   }
-  condition=eval(parse(text=paste0("taxobj$Groupfile")))
+  condition=methods::slot(taxobj, "groupfile")
   condition=condition[eval(parse(text=paste0("taxobj$configuration$treat_location"))) ]
   condition=condition[,1]
   if(is.null(comparison)){
@@ -113,7 +113,7 @@ Deseq_analysis<-function(taxobj,taxlevel,comparison=NULL,cutoff,control_name,pai
       stop("comparision does not match, Please check 'comparision'")
     }
     taxobj=sub_tax_summary(taxobj=taxobj,specificnum = which(condition %in% comparison))
-    condition=eval(parse(text=paste0("taxobj$Groupfile")))
+    condition=eval(parse(text=paste0("taxobj$groupfile")))
     condition=condition[eval(parse(text=paste0("taxobj$configuration$treat_location"))) ]
     condition=condition[,1]
   }
@@ -123,12 +123,12 @@ Deseq_analysis<-function(taxobj,taxlevel,comparison=NULL,cutoff,control_name,pai
 
   group_length=length(comparison)
   if(group_length!=2){
-    stop("Comparsion group not assigned!",call. = FALSE)
+    stop("'comparison' not assigned!",call. = FALSE)
     return(NULL)
   }
   if(paired==TRUE){
     ofdds = DESeq2::DESeqDataSetFromMatrix(countData = inputframe, S4Vectors::DataFrame(condition,subject),
-                                   ~subject+condition)
+                                           ~subject+condition)
   }else{
     ofdds=DESeq2::DESeqDataSetFromMatrix(countData=inputframe, S4Vectors::DataFrame(condition), ~ condition)
   }

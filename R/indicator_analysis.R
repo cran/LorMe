@@ -39,7 +39,7 @@ indicator_analysis=function(taxobj,taxlevel,func="r.g",reads=FALSE){
     stop("Illegal 'taxlevel'!")
     return(NULL)
   }
-  groupfile= eval(parse(text=paste0("taxobj$Groupfile")))
+  groupfile= eval(parse(text=paste0("taxobj$groupfile")))
   condition= groupfile[eval(parse(text=paste0("taxobj$configuration$treat_location"))) ]
   condition= condition[,1]
   if(length(unique(condition))==1){

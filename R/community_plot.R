@@ -71,7 +71,7 @@ community_plot=function(taxobj,taxlevel,n=10,palette="Spectral",nrow=NULL,rmpref
   getPalette <-colorRampPalette(brewer.pal(color_n, palette))
   inputframe=eval(parse(text=paste0("taxobj","$",taxlevel,"_percent")))
   topframe<-Top_taxa(inputframe,n,2,1)
-  groupframe=taxobj$Groupfile
+  groupframe=taxobj$groupfile
   treat_location=taxobj$configuration$treat_location
   facet_location=taxobj$configuration$facet_location
   rep_location=taxobj$configuration$rep_location
