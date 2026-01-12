@@ -1,6 +1,6 @@
-3f63b255961df19d436bc00272fd7fdc *DESCRIPTION
+9251e3cc3d85a41e30810eb4dbfc4af7 *DESCRIPTION
 c96b1f5a07d66d779b96378512de99de *NAMESPACE
-c51e9fb31dcb70faa260064ec8bab49d *R/0.LorMe_define.R
+02216027499020b2923d8cd57ce37308 *R/0.LorMe_define.R
 513880c0d213f4f3f2f5fa11040bc276 *R/Alpha_diversity_calculator.R
 8c3018af065f2ebe7621cd7f077813d9 *R/Alpha_diversity_calculator2.R
 0d3aa30ec7ac2a152bb0af1a1b085e09 *R/Deseq_analysis.R
@@ -11,7 +11,7 @@ c2fd0c5d8b39ca12b449f4d3f561a713 *R/Facet_group.R
 eb97e4363b6ee7d8bb07681622fca4a2 *R/LorMe.R
 f50b19eb4b533b6caf3173a0cd7f8894 *R/LorMe_defaults.R
 f46ed235e9ae6337e5df5caa83cc2550 *R/LorMe_options.R
-3e821ca46bb3f235327a3a92f0a96bbf *R/LorMe_pipeline.R
+dd5a4f5fe250d09d4047d5d948d15eb0 *R/LorMe_pipeline.R
 ba08f42b3649254d181bcb2853585b96 *R/Module_abundance.R
 a2cf253fcd6579178f29a2705dc2cc7d *R/Module_composition.R
 d41fbc76f847cbd43b8acd2e00eb681a *R/NC_remove.R
@@ -29,10 +29,10 @@ fe404ac534a3c254baba477b77fe156b *R/anova_report.R
 b68013ede29c30a9293ce3b7104e2608 *R/color_scheme.R
 e873e7dadf1422889afeb9fdfaa52195 *R/combine_and_translate.R
 942a0eda275483ba6c83430537376b18 *R/community_plot.R
-5af35a0e334c53895d5ed84fa3bceee2 *R/compare_plot.R
+8e82234421a1b87adc6dbea38bba2018 *R/compare_plot.R
 e4dd0dc655229637f1b1403726ebfa50 *R/differential_bar.R
 acbb770b74b0304a1e6ca6fb97f39e5f *R/global_options.R
-a21a64a1f03b07f75bc142abd65c315b *R/indicator_analysis.R
+20934a2e8c884e470a0c0989c3980348 *R/indicator_analysis.R
 34092cf73d5dec3653e4c7f01888b839 *R/kruskal_report.R
 c0da8e0987273d7c2e0aeca71e6b19fe *R/manhattan.R
 b7bfa3cfb78cb6cc70326feebe251ea3 *R/nc.R
@@ -45,7 +45,7 @@ c5bf831e357af6a03a277515b9568016 *R/network_withdiff.R
 54ca80f28b6f0b5fba6a01f7ff9f3156 *R/object_config.R
 92801a751ef8c77337ee9c2f0968ea57 *R/safe_run.R
 6ec9dbcaede10138ebf6765ee1bcb707 *R/structure_plot.R
-56352461158f5154f6228120c3f3bb2d *R/sub_tax_summary.R
+4643e01ab0bac6655c2e58b879884f07 *R/sub_tax_summary.R
 cd12783ac56a01bf1e55bd9409100421 *R/t_test_report.R
 9004846fcbe449642484a79e2720cbe6 *R/tax_summary.R
 03549f1d0cd9c0da97ce02c944547759 *R/tbRDA_analysis.R
@@ -68,7 +68,7 @@ adc77e4c304be162222997a9ea08bc74 *man/Dimension_reduction.Rd
 0a5823cb874544dc7a54c2efe3631916 *man/LorMe-package.Rd
 b97025dfbfbc62493136b64e4c577b81 *man/LorMe_defaults.Rd
 7e67abe491afa4692ca981d54cd8e1b4 *man/LorMe_options.Rd
-00527cadd252a3ee451c767feb1e586d *man/LorMe_pipeline.Rd
+f37a51fa920aafa2e96aaaf6b5f73d97 *man/LorMe_pipeline.Rd
 aa321a43fce59c8e15e55a96091ea58f *man/Module_abundance.Rd
 7e8e2a2ea0cb4793a117030c6ac8aeaa *man/Module_composition.Rd
 e99207466f179781865018330bb51545 *man/NC_remove.Rd

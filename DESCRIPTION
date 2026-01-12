@@ -1,6 +1,6 @@
 Package: LorMe
 Title: Lightweight One-Line Resolving Microbial Ecology Program
-Version: 2.0.1
+Version: 2.0.2
 Authors@R: 
     c(person(given = "Ningqi",
            family = "Wang",
@@ -29,10 +29,10 @@ Suggests: testthat (>= 3.0.0), ggrepel, readr, patchwork, grid,
         microeco
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2025-11-17 13:48:18 UTC; 24340
+Packaged: 2026-01-12 06:32:25 UTC; 24340
 Author: Ningqi Wang [aut, cre, cph],
   Yaozhong Zhang [aut],
   Gaofei Jiang [aut]
 Depends: R (>= 3.5.0)
 Repository: CRAN
-Date/Publication: 2025-11-17 21:51:49 UTC
+Date/Publication: 2026-01-12 07:30:02 UTC

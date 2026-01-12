@@ -104,6 +104,9 @@
 #' ## Reset to default options
 #' LorMe_defaults()
 #'
+#' ## Get options for re-analysis
+#' options(LorMe = Two_group_analysis$Analysis_option) # Then try the previous analysis command
+#'
 #' ## Example: three-group comparison with custom options
 #' LorMe_options(
 #'   global = list(
@@ -224,9 +227,12 @@ LorMe_pipeline=function(taxobj,step="all"){
                                               control_name =  deseq_control,
                                               paired =  opt$deseq$paired,
                                               subject =  opt$deseq$subject))%>% suppressMessages()
-        if(is.null(diffbar_result)){fail_list=c(fail_list,"DESeq")}
+        if(is.null(diffbar_result)){fail_list=c(fail_list,"Differential bar")}
         if(is.null(Deseq_results)){
           message("Deseq returns NULL, please note")
+          fail_list=c(fail_list,"DESeq")
+          Deseq_manhattan=NULL
+          Deseq_volcano=NULL
         }else{
           Deseq_volcano=safe_run(volcano_plot(Deseq_results,cutoff = opt$deseq$cutoff,aes_col = methods::slot(taxobj,"configuration")$treat_col))
           if(is.null(opt$manh$controlname)){
@@ -363,7 +369,10 @@ LorMe_pipeline=function(taxobj,step="all"){
         }else{
           if(is.null(opt$sub_net$n)){
             nrep=as.numeric(table(treat_stat)[i])
-          }  else if (opt$sub_net$n>as.numeric(table(treat_stat)[i])){
+          }  else {
+            nrep= opt$sub_net$n
+          }
+          if (nrep>as.numeric(table(treat_stat)[i])){
             nrep=as.numeric(table(treat_stat)[i])
           }
           message("")
@@ -378,7 +387,7 @@ LorMe_pipeline=function(taxobj,step="all"){
           if(is.null(sub_network_temp)){fail_list=c(fail_list,paste0("Treatment ",i,"-sub network"))}
           sub_network_results=c(sub_network_results,list(sub_network_temp))
           if(is.null(sub_network_results[[1]])){
-            warning("Return NULL in running sub network for treatment",i)
+            warning("Return NULL in running sub network for treatment '",i,"'")
           }else{
             names(sub_network_results)[length(sub_network_results)]=paste0(i,"_sub_network")
           }
@@ -402,7 +411,10 @@ LorMe_pipeline=function(taxobj,step="all"){
     if(run_comb_net==TRUE){
       if(is.null(opt$all_net$n)){
         nrep=round(0.5*length(treat_stat),0)
-      }  else if (opt$all_net$n>as.numeric(length(treat_stat)[i])){
+      }  else {
+        nrep=opt$all_net$n
+      }
+      if (nrep>as.numeric(length(treat_stat))){
         nrep=length(treat_stat)
       }
       combine_network_results=safe_run(network_analysis(taxobj ,A_level,
@@ -425,6 +437,7 @@ LorMe_pipeline=function(taxobj,step="all"){
       message(paste0("### ",fail," analysis"))
     }
   }
+  all_results=c(all_results,list(opt))
+  names(all_results)[length(all_results)]="Analysis_option"
   return(all_results)
 }
-

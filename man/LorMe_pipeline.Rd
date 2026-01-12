@@ -111,6 +111,9 @@ Two_group_analysis$combine_network_results \%>\% network_visual()
 ## Reset to default options
 LorMe_defaults()
 
+## Get options for re-analysis
+options(LorMe = Two_group_analysis$Analysis_option) # Then try the previous analysis command
+
 ## Example: three-group comparison with custom options
 LorMe_options(
   global = list(
