@@ -1,7 +1,7 @@
-9251e3cc3d85a41e30810eb4dbfc4af7 *DESCRIPTION
-c96b1f5a07d66d779b96378512de99de *NAMESPACE
+020f0ee2bb8e7ee4989f828745366730 *DESCRIPTION
+7f92e39341e7f7fc166b5f5ebda0a42e *NAMESPACE
 02216027499020b2923d8cd57ce37308 *R/0.LorMe_define.R
-513880c0d213f4f3f2f5fa11040bc276 *R/Alpha_diversity_calculator.R
+33aa02e131aa9abc4953ab6781057560 *R/Alpha_diversity_calculator.R
 8c3018af065f2ebe7621cd7f077813d9 *R/Alpha_diversity_calculator2.R
 0d3aa30ec7ac2a152bb0af1a1b085e09 *R/Deseq_analysis.R
 e80b097534d9a9d94519421eff76441d *R/Deseq_analysis2.R
@@ -13,7 +13,7 @@ f50b19eb4b533b6caf3173a0cd7f8894 *R/LorMe_defaults.R
 f46ed235e9ae6337e5df5caa83cc2550 *R/LorMe_options.R
 dd5a4f5fe250d09d4047d5d948d15eb0 *R/LorMe_pipeline.R
 ba08f42b3649254d181bcb2853585b96 *R/Module_abundance.R
-a2cf253fcd6579178f29a2705dc2cc7d *R/Module_composition.R
+045a8c88c83ed22e5f5cd2ab56ca6802 *R/Module_composition.R
 d41fbc76f847cbd43b8acd2e00eb681a *R/NC_remove.R
 428b6f31fb60d06e294d9a8fca572b7f *R/Pre_assumption.R
 378d782bc4287a5eea40419fd3d3aa47 *R/Three_group.R
@@ -40,11 +40,11 @@ b7bfa3cfb78cb6cc70326feebe251ea3 *R/nc.R
 249dec600e0e6bf3c524d6110c221caa *R/network_analysis2.R
 414697a889fb4b01f911925b8b3d66bf *R/network_stat.R
 dfc4e417d4aac5a354763128939105ef *R/network_visual.R
-a3468b2091c711a7f48215328efd3eb4 *R/network_visual_re.R
+8fd86ff6313d1965d0f2bf52601b15b7 *R/network_visual_re.R
 c5bf831e357af6a03a277515b9568016 *R/network_withdiff.R
 54ca80f28b6f0b5fba6a01f7ff9f3156 *R/object_config.R
 92801a751ef8c77337ee9c2f0968ea57 *R/safe_run.R
-6ec9dbcaede10138ebf6765ee1bcb707 *R/structure_plot.R
+91fb6d7c272a10333fd5aadd6c1f381d *R/structure_plot.R
 4643e01ab0bac6655c2e58b879884f07 *R/sub_tax_summary.R
 cd12783ac56a01bf1e55bd9409100421 *R/t_test_report.R
 9004846fcbe449642484a79e2720cbe6 *R/tax_summary.R
@@ -70,7 +70,7 @@ b97025dfbfbc62493136b64e4c577b81 *man/LorMe_defaults.Rd
 7e67abe491afa4692ca981d54cd8e1b4 *man/LorMe_options.Rd
 f37a51fa920aafa2e96aaaf6b5f73d97 *man/LorMe_pipeline.Rd
 aa321a43fce59c8e15e55a96091ea58f *man/Module_abundance.Rd
-7e8e2a2ea0cb4793a117030c6ac8aeaa *man/Module_composition.Rd
+3791482fc6c677aef1f23cd08c60341b *man/Module_composition.Rd
 e99207466f179781865018330bb51545 *man/NC_remove.Rd
 ee89231e01774d398acaf10fcd346312 *man/Three_group.Rd
 783cca97a28f0a3acd7fee68928933e1 *man/Top_taxa.Rd
@@ -105,7 +105,7 @@ ae5f3c3aa03a467ddea81531da457464 *man/network_visual.Rd
 40d1c9bba553cf22706f3137f1c9acd2 *man/object_config.Rd
 1fe7230b40f84b7914dfdd342a37524d *man/safe_run.Rd
 1ba92de7f2ed1471f011c36c222c0585 *man/show-LorMe-method.Rd
-ea85d90edf97921cc503e6b114e9d6fa *man/structure_plot.Rd
+a984bdbc61a464dc1f1d46fa27e19ec0 *man/structure_plot.Rd
 8168957731b808adfc58e4cc4e033157 *man/sub_tax_summary.Rd
 799bbfc87d88ddf139598f2911982a6b *man/t_test_report.Rd
 3497b369e17c88ab3f63971ffd6c6040 *man/tax_summary.Rd
